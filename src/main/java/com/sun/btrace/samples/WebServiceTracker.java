@@ -39,6 +39,9 @@ import com.sun.btrace.annotations.*;
  * implementor class name.
  */
 @BTrace public class WebServiceTracker {
+	
+	//pcn为标注泛型"@javax.jws.WebService"的类名
+	//pmn为标注泛型"@javax.jws.WebMethod"的方法名
    @OnMethod(
      clazz="@javax.jws.WebService", 
      method="@javax.jws.WebMethod"
@@ -47,7 +50,10 @@ import com.sun.btrace.annotations.*;
        print("entering webservice ");
        println(Strings.strcat(Strings.strcat(pcn, "."), pmn));
    }
-
+	
+	//pcn为标注泛型"@javax.jws.WebService"的类名
+	//pmn为标注泛型"@javax.jws.WebMethod"的方法名
+    //d为这个方法运行的时间
    @OnMethod(
      clazz="@javax.jws.WebService", 
      method="@javax.jws.WebMethod",

@@ -36,16 +36,17 @@ package com.sun.btrace.samples;
  * Without -I option in command, BTrace skips preprocessor
  * invocation.
  */
+/**
 #include "btracedefs.h"
 
 BTRACE_IMPORT
 
-/**
+
  * This sample demonstrates that you can expose a BTrace
  * class as a JMX MBean. After connecting BTrace to the
  * target application, connect VisualVM or jconsole or 
  * any other JMX client to the same application.
- */ 
+
 BTRACE ThreadBean {
 
     // PROPERTY makes the count field to be exposed
@@ -64,4 +65,4 @@ BTRACE ThreadBean {
     ACTION ontimer() {
         println(count);
     }
-}
+} */ 
